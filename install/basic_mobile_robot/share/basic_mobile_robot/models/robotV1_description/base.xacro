@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+
+  <xacro:macro name="robot_base" params="parent child xyz rpy">
+
+    <link name="${child}">
+      <visual>
+        <geometry>
+          <box size="0.3 0.3 0.005" />
+        </geometry>
+        <material name="green">
+          <color rgba="0.0 1.0 0.0 1.0" />
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <box size="0.3 0.3 0.005" />
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>0.9</mu> <!-- Coeficiente de atrito estático -->
+              <mu2>0.7</mu2> <!-- Coeficiente de atrito dinâmico -->
+            </ode>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0.1</restitution_coefficient> <!-- Coeficiente de restituição -->
+            <threshold>100.0</threshold> <!-- Limite de impacto para ativar a restituição -->
+          </bounce>
+        </surface>
+      </collision>
+      <inertial>
+        <mass value="1.0" /> <!-- Massa ajustada para um valor mais realista -->
+        <inertia ixx="0.02" ixy="0.0" ixz="0.0" iyy="0.02" iyz="0.0" izz="0.01" />
+      </inertial>
+    </link>
+
+    <joint name="${parent}_to_${child}_joint" type="fixed">
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <parent link="${parent}" />
+      <child link="${child}" />
+    </joint>
+
+  </xacro:macro>
+</robot>

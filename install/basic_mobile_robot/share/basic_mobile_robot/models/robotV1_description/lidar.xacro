@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+
+  <xacro:macro name="lidar" params="parent child xyz rpy">
+
+    <link name="${child}">
+      <visual>
+        <geometry>
+          <box size="0.10 0.075 0.060" />
+        </geometry>
+        <material name="blue">
+          <color rgba="0.0 0.0 1 1" />
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <box size="0.10 0.075 0.060" />
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>0.5</mu> <!-- Coeficiente de atrito estático -->
+              <mu2>0.5</mu2> <!-- Coeficiente de atrito dinâmico -->
+            </ode>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0.1</restitution_coefficient> <!-- Coeficiente de restituição -->
+            <threshold>100.0</threshold> <!-- Limite de impacto para ativar a restituição -->
+          </bounce>
+        </surface>
+      </collision>
+      <inertial>
+        <mass value="0.05" /> <!-- Ajustado para um valor mais realista para um LIDAR -->
+        <inertia ixx="0.0002" ixy="0.0" ixz="0.0" iyy="0.0006" iyz="0.0" izz="0.0008" /> <!-- Valores de inércia ajustados -->
+      </inertial>
+    </link>
+
+    <joint name="${parent}_to_${child}_joint" type="fixed">
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <parent link="${parent}" />
+      <child link="${child}" />
+    </joint>
+
+  </xacro:macro>
+
+</robot>

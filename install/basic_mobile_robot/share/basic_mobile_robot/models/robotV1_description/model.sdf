@@ -1,0 +1,238 @@
+<sdf version="1.6">
+  <model name="mobile_robot">
+    <static>false</static>
+    
+    <link name="world_link" />
+
+    <link name="first_base_link">
+      <pose>0 0 0.075 0 0 0</pose>
+      <visual name="first_base_visual"> <!-- Adicionado name -->
+        <geometry>
+          <box>
+            <size>0.2 0.2 0.05</size> <!-- Tamanho do corpo -->
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Red</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="lidar_link">
+      <pose>0.04 0 0.035 0 0 0</pose>
+      <visual name="lidar_visual"> <!-- Adicionado name -->
+        <geometry>
+          <cylinder>
+            <radius>0.025</radius> <!-- Raio do LIDAR -->
+            <length>0.05</length> <!-- Comprimento do LIDAR -->
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Blue</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <joint name="first_base_to_world" type="fixed">
+      <parent>world_link</parent>
+      <child>first_base_link</child>
+    </joint>
+
+    <!-- Definição dos motores -->
+    <link name="front_left_motor_link">
+      <visual name="front_left_motor_visual"> <!-- Adicionado name -->
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.1</size> <!-- Tamanho do motor -->
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Green</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="front_right_motor_link">
+      <visual name="front_right_motor_visual"> <!-- Adicionado name -->
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Green</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="back_left_motor_link">
+      <visual name="back_left_motor_visual"> <!-- Adicionado name -->
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Green</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="back_right_motor_link">
+      <visual name="back_right_motor_visual"> <!-- Adicionado name -->
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Green</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Rodas -->
+    <link name="front_left_wheel_link">
+      <visual name="front_left_wheel_visual"> <!-- Adicionado name -->
+        <geometry>
+          <cylinder>
+            <radius>0.025</radius>
+            <length>0.01</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Black</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="front_right_wheel_link">
+      <visual name="front_right_wheel_visual"> <!-- Adicionado name -->
+        <geometry>
+          <cylinder>
+            <radius>0.025</radius>
+            <length>0.01</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Black</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="back_left_wheel_link">
+      <visual name="back_left_wheel_visual"> <!-- Adicionado name -->
+        <geometry>
+          <cylinder>
+            <radius>0.025</radius>
+            <length>0.01</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Black</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="back_right_wheel_link">
+      <visual name="back_right_wheel_visual"> <!-- Adicionado name -->
+        <geometry>
+          <cylinder>
+            <radius>0.025</radius>
+            <length>0.01</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Black</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Juntas -->
+    <joint name="front_left_motor_joint" type="revolute">
+      <parent>first_base_link</parent>
+      <child>front_left_motor_link</child>
+      <pose>0.10 0.040 -0.025 0 0 0</pose>
+    </joint>
+
+    <joint name="front_right_motor_joint" type="revolute">
+      <parent>first_base_link</parent>
+      <child>front_right_motor_link</child>
+      <pose>0.10 -0.040 -0.025 0 0 0</pose>
+    </joint>
+
+    <joint name="back_left_motor_joint" type="revolute">
+      <parent>first_base_link</parent>
+      <child>back_left_motor_link</child>
+      <pose>-0.10 0.040 -0.025 0 0 0</pose>
+    </joint>
+
+    <joint name="back_right_motor_joint" type="revolute">
+      <parent>first_base_link</parent>
+      <child>back_right_motor_link</child>
+      <pose>-0.10 -0.040 -0.025 0 0 0</pose>
+    </joint>
+
+    <!-- Plugin de Odometria -->
+    <plugin name="odometry_plugin" filename="libgazebo_ros_diff_drive.so">
+      <ros>
+        <namespace>mobile_robot</namespace>
+        <argument>cmd_vel:=cmd_vel</argument>
+        <argument>odom:=odom</argument>
+      </ros>
+      <left_joint>front_left_motor_joint</left_joint>
+      <right_joint>front_right_motor_joint</right_joint>
+      <wheel_separation>0.215</wheel_separation>
+      <wheel_diameter>0.035</wheel_diameter>
+      <max_speed>1.0</max_speed>
+      <min_speed>-1.0</min_speed>
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <robot_base_frame>first_base_link</robot_base_frame>
+    </plugin>
+
+    <!-- Plugin LIDAR -->
+    <plugin name="lidar_plugin" filename="libgazebo_ros_laser.so">
+      <ros>
+        <namespace>mobile_robot</namespace>
+        <argument>scan:=scan</argument>
+      </ros>
+      <frameName>lidar_link</frameName>
+      <updateRate>20.0</updateRate>
+      <visualize>true</visualize>
+      <minRange>0.12</minRange>
+      <maxRange>10.0</maxRange>
+    </plugin>
+    
+  </model>
+</sdf>
