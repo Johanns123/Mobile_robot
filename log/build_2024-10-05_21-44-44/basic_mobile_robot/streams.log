@@ -1,0 +1,42 @@
+[0.009s] Invoking command in '/home/johann/dev_ws/build/basic_mobile_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/johann/dev_ws/src/basic_mobile_robot -DCMAKE_INSTALL_PREFIX=/home/johann/dev_ws/install/basic_mobile_robot
+[0.297s] -- The C compiler identification is GNU 11.4.0
+[1.356s] -- The CXX compiler identification is GNU 11.4.0
+[2.085s] -- Detecting C compiler ABI info
+[2.303s] -- Detecting C compiler ABI info - done
+[2.307s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.308s] -- Detecting C compile features
+[2.308s] -- Detecting C compile features - done
+[2.310s] -- Detecting CXX compiler ABI info
+[2.521s] -- Detecting CXX compiler ABI info - done
+[2.526s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.526s] -- Detecting CXX compile features
+[2.527s] -- Detecting CXX compile features - done
+[2.529s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.629s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.709s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.770s] -- Added test 'lint_cmake' to check CMake code style
+[2.772s] -- Added test 'xmllint' to check XML markup files
+[2.774s] -- Configuring done
+[2.776s] -- Generating done
+[2.777s] -- Build files have been written to: /home/johann/dev_ws/build/basic_mobile_robot
+[2.781s] Invoked command in '/home/johann/dev_ws/build/basic_mobile_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/johann/dev_ws/src/basic_mobile_robot -DCMAKE_INSTALL_PREFIX=/home/johann/dev_ws/install/basic_mobile_robot
+[2.781s] Invoking command in '/home/johann/dev_ws/build/basic_mobile_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/johann/dev_ws/build/basic_mobile_robot -- -j12 -l12
+[2.803s] Invoked command in '/home/johann/dev_ws/build/basic_mobile_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/johann/dev_ws/build/basic_mobile_robot -- -j12 -l12
+[2.820s] Invoking command in '/home/johann/dev_ws/build/basic_mobile_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/johann/dev_ws/build/basic_mobile_robot
+[2.823s] -- Install configuration: ""
+[2.824s] -- Installing: /home/johann/dev_ws/install/basic_mobile_robot/share/ament_index/resource_index/package_run_dependencies/basic_mobile_robot
+[2.824s] -- Installing: /home/johann/dev_ws/install/basic_mobile_robot/share/ament_index/resource_index/parent_prefix_path/basic_mobile_robot
+[2.824s] -- Installing: /home/johann/dev_ws/install/basic_mobile_robot/share/basic_mobile_robot/environment/ament_prefix_path.sh
+[2.824s] -- Installing: /home/johann/dev_ws/install/basic_mobile_robot/share/basic_mobile_robot/environment/ament_prefix_path.dsv
+[2.825s] -- Installing: /home/johann/dev_ws/install/basic_mobile_robot/share/basic_mobile_robot/environment/path.sh
+[2.825s] -- Installing: /home/johann/dev_ws/install/basic_mobile_robot/share/basic_mobile_robot/environment/path.dsv
+[2.825s] -- Installing: /home/johann/dev_ws/install/basic_mobile_robot/share/basic_mobile_robot/local_setup.bash
+[2.825s] -- Installing: /home/johann/dev_ws/install/basic_mobile_robot/share/basic_mobile_robot/local_setup.sh
+[2.825s] -- Installing: /home/johann/dev_ws/install/basic_mobile_robot/share/basic_mobile_robot/local_setup.zsh
+[2.825s] -- Installing: /home/johann/dev_ws/install/basic_mobile_robot/share/basic_mobile_robot/local_setup.dsv
+[2.825s] -- Installing: /home/johann/dev_ws/install/basic_mobile_robot/share/basic_mobile_robot/package.dsv
+[2.825s] -- Installing: /home/johann/dev_ws/install/basic_mobile_robot/share/ament_index/resource_index/packages/basic_mobile_robot
+[2.825s] -- Installing: /home/johann/dev_ws/install/basic_mobile_robot/share/basic_mobile_robot/cmake/basic_mobile_robotConfig.cmake
+[2.825s] -- Installing: /home/johann/dev_ws/install/basic_mobile_robot/share/basic_mobile_robot/cmake/basic_mobile_robotConfig-version.cmake
+[2.825s] -- Installing: /home/johann/dev_ws/install/basic_mobile_robot/share/basic_mobile_robot/package.xml
+[2.827s] Invoked command in '/home/johann/dev_ws/build/basic_mobile_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/johann/dev_ws/build/basic_mobile_robot

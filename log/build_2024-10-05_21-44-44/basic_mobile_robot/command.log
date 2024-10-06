@@ -1,0 +1,6 @@
+Invoking command in '/home/johann/dev_ws/build/basic_mobile_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/johann/dev_ws/src/basic_mobile_robot -DCMAKE_INSTALL_PREFIX=/home/johann/dev_ws/install/basic_mobile_robot
+Invoked command in '/home/johann/dev_ws/build/basic_mobile_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/johann/dev_ws/src/basic_mobile_robot -DCMAKE_INSTALL_PREFIX=/home/johann/dev_ws/install/basic_mobile_robot
+Invoking command in '/home/johann/dev_ws/build/basic_mobile_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/johann/dev_ws/build/basic_mobile_robot -- -j12 -l12
+Invoked command in '/home/johann/dev_ws/build/basic_mobile_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/johann/dev_ws/build/basic_mobile_robot -- -j12 -l12
+Invoking command in '/home/johann/dev_ws/build/basic_mobile_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/johann/dev_ws/build/basic_mobile_robot
+Invoked command in '/home/johann/dev_ws/build/basic_mobile_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/johann/dev_ws/build/basic_mobile_robot
